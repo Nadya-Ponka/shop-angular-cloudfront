@@ -38,7 +38,7 @@ custom:
 
   ## Serverless-single-page-app-plugin configuration:
   s3LocalPath: ${self:custom.client.distributionFolder}/
-  s3BucketName: ${self:custom.client.bucketName}
+  s3BucketName: emotions-shop-second
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
