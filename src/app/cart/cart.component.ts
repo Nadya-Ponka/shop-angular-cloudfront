@@ -6,6 +6,7 @@ import { ProductCheckout } from '../products/product.interface';
 import { Observable } from 'rxjs';
 import { CartService } from './cart.service';
 import { map, shareReplay } from 'rxjs/operators';
+import { Product } from '../products/product.interface';
 
 @Component({
   selector: 'app-cart',
@@ -75,11 +76,11 @@ export class CartComponent implements OnInit {
     this.cartEmpty$ = this.totalInCart$.pipe(map((count) => count > 0));
   }
 
-  add(id: string): void {
-    this.cartService.addItem(id);
+  add(product: Product): void {
+    this.cartService.addItem(product);
   }
 
-  remove(id: string): void {
-    this.cartService.removeItem(id);
+  remove(product: Product): void {
+    this.cartService.removeItem(product);
   }
 }
